@@ -1,0 +1,15 @@
+<aura:component controller="Task3_GetOpps" implements="flexipage:availableForRecordHome,force:hasRecordId" access="global">
+	<p class = "Heading">Top-5 Opportunities</p>
+	<aura:attribute name = "data" type = "Object"/>
+	<aura:attribute name = "columns" type = "Object"/>
+	<aura:handler name = "init" value = "{!this}" action = "{!c.doInit}"/>
+
+	<div class = "TableTop">
+		<lightning:datatable aura:id="oppTable"
+							 keyField="id"
+							 data="{!v.data}"
+							 columns="{!v.columns}"
+							 hideCheckboxColumn="true"
+							 />
+	</div>
+</aura:component>

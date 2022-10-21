@@ -1,0 +1,6 @@
+<aura:component implements="force:lightningQuickAction">
+  
+
+    <c:lwcDeleteAllLeadsConfirmation  />
+
+</aura:component>	

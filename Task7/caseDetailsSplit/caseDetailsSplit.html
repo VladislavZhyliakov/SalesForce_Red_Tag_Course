@@ -1,0 +1,19 @@
+<template>
+    <h1>DETAILS</h1>
+    <div class="slds-box slds-theme_default" >
+    <template for:each={caseDetailsTracker} for:item="Item">
+        <div key = {Item.Id}>
+            <h3>Case Owner: {Item.Owner.Name}</h3>
+            <h3>Status: {Item.Status}</h3>
+            <h3>Case Number: {Item.CaseNumber}</h3>
+            <h3>Contact Name: {Item.Contact.Name}</h3>
+            <h3>Contact Phone: {Item.ContactPhone}</h3>
+            <h3>Account Id: {Item.AccountId}</h3>
+            <h3>Contact Email: {ItemContactEmail}</h3>
+            <h3>Type: {Item.Type}</h3>
+            <h3>Case Origin: {Item.Origin}</h3>
+            <h3>Case Reason: {Item.Reason}</h3>
+        </div>
+    </template>
+    </div>
+</template>

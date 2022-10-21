@@ -1,0 +1,30 @@
+<template>
+
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col">
+            <span>
+                <h1>LIST VIEW</h1>
+                <div class="slds-card__body_inner">
+                    <lightning-datatable
+                    key-field="id"
+                    data = {cases}
+                    columns={cols}
+                    onrowselection = {handleRowSelection}
+                    onrowaction = {handleRowAction}
+                    >
+                    </lightning-datatable>
+                </div>
+            </span>
+        </div> 
+
+        <div class="slds-col">
+            <span>
+                <div if:true = {showDetails}>
+                    <c-case-details-split get-case = {caseID}></c-case-details-split>
+                </div>
+            </span>
+        </div>
+    </div>
+</template>
+
+

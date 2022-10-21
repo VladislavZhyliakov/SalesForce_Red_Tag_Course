@@ -1,0 +1,17 @@
+<template>
+    <div>
+        <p class="headerContactUs">CONTACT US</p>
+    </div>
+    <lightning-input class = "FirstName" label="FirstName" type = "text" required="true"></lightning-input>
+    <lightning-input class = "LastName" label="LastName" type = "text" required="true"></lightning-input>
+    <lightning-input class = "Email" label="Email" type = "email" required="true" pattern="[A-Za-z0-9._-]+@[a-z0-9-]+\.[a-z]{2,}$" message-when-pattern-mismatch="Please enter a valid email. Format: example@domail.com"></lightning-input>
+    <lightning-input class = "Phone" label="Phone" type = "text" required="true" pattern="[0-9]{12}" message-when-pattern-mismatch="Please enter a valid phone (12 digits). Format: 123456789123"></lightning-input>
+
+    <lightning-combobox class ="Product" label ="Product" options={productOptions} required="true"></lightning-combobox>
+
+    <h1 class ="yourQuestion">YOUR QUESTION</h1>
+    <lightning-textarea class = "Question"></lightning-textarea>
+
+    <lightning-button label="Submit" onclick={updateText}></lightning-button>
+ 
+</template>
